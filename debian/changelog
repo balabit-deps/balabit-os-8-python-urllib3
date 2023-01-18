@@ -1,3 +1,13 @@
+python-urllib3 (1.25.8-2ubuntu0.2) focal-security; urgency=medium
+
+  * SECURITY UPDATE: DoS via URL regex backtracking
+    - debian/patches/CVE-2021-33503.patch: improve performance of
+      sub-authority splitting in URL in src/urllib3/util/url.py,
+      test/test_util.py.
+    - CVE-2021-33503
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 18 Jan 2023 10:50:06 -0500
+
 python-urllib3 (1.25.8-2ubuntu0.1) focal-security; urgency=medium
 
   * SECURITY UPDATE: CRLF injection via method parameter
