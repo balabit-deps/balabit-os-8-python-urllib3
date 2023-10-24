@@ -1,3 +1,17 @@
+python-urllib3 (1.25.8-2ubuntu0.3) focal-security; urgency=medium
+
+  * SECURITY UPDATE: http cookie leakage via http redirect
+    - debian/patches/CVE-2023-43804.patch: removes the cookie from the 
+      http request when it is redirected to a different origin.
+    - CVE-2023-43804
+  * SECURITY UPDATE: http body leakage via http redirect
+    - debian/patches/CVE-2023-45803.patch: removes the body from the 
+      http request when it is redirected to a different origin and the 
+      http verb is changed to GET.
+    - CVE-2023-45803
+
+ -- Jorge Sancho Larraz <jorge.sancho.larraz@canonical.com>  Tue, 24 Oct 2023 21:57:53 +0200
+
 python-urllib3 (1.25.8-2ubuntu0.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: DoS via URL regex backtracking
